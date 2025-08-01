@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="jpg/logo.png" type="image/x-icon">
+    <title>Hồ sơ cá nhân của Hiến</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="profile-card" data-aos>
+            <div class="avatar-logo">
+                <img src="jpg/avt.jpg" alt="Ảnh đại diện" class="avatar">
+                <video class="logo-video" autoplay loop muted playsinline>
+                    <source src="video/logodong.mp4" type="video/mp4">
+                    Trình duyệt không hỗ trợ video.
+                </video>
+            </div>
+
+            <h1 id="name">Nguyễn Nọc Hiến</h1>
+            <p class="job" id="job">
+                Sinh viên ngành Công nghệ thông tin trường HaUI - <span style="color: hotpink;">&#10084</span>
+            </p>
+            <p class="description" id="description">
+                Yêu thích học lập trình, thích khám phá công nghệ - các thuật toán, chia sẻ và học hỏi kiến thức với mọi
+                người<span style="color: hotpink;"> &#10084</span>.
+            </p>
+            <button onclick="changeName()">Đổi tên</button>
+            <button onclick="toggleLanguage()">Đổi ngôn ngữ</button>
+
+            <div class="skills">
+                <div class="info-section" data-aos>
+                    <h2>Thông tin cá nhân</h2>
+                    <div class="info-item">
+                        <h3>📍 Quê quán</h3>
+                        <p>Thái Thụy, Thái Bình</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>🏫 Trường học</h3>
+                        <p>Đại học Công Nghiệp Hà Nội (HaUI) khoa công nghệ thông tin và chuyền thông <span
+                                style="font-size: 28px; color: hotpink;">❤️‍🔥</span>
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📌 Trạng thái</h3>
+                        <p>Độc Thân &#10084 </p>
+                    </div>
+                </div>
+
+                <h2>Kỹ năng</h2>
+                <div class="skill">
+                    HTML <div class="progress">
+                        <div class="bar" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    CSS <div class="progress">
+                        <div class="bar" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    JavaScript <div class="progress">
+                        <div class="bar" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="socials">
+                <a href="https://www.facebook.com/nguyen.hien.918626" target="_blank" class="facebook">Facebook</a>
+                <a href="https://www.tiktok.com/@nguyenhien240626" target="_blank" class="tiktok">TikTok</a>
+                <a href="https://www.instagram.com/hien2k6tta/" target="_blank" class="instagram">Instagram</a>
+            </div>
+
+            <div class="donation">
+                <h2>QR cá nhân của Hiến &#10084</h2>
+                <p>yêu quý mình có thể donate cho mình nha <span style="color: hotpink;">&#10084</span></p>
+                <div class="qr-bank">
+                    <img src="jpg/qr.jpg" alt="Mã QR cá nhân" class="zoomable" onclick="showImage(this)">
+                    <img src="jpg/avt.jpg" alt="Thông tin ngân hàng" class="zoomable" onclick="showImage(this)">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <canvas id="snow-canvas"></canvas>
+
+    <div id="image-modal" class="image-modal" onclick="closeImage()">
+        <img id="modal-img" src="" alt="Phóng to ảnh">
+    </div>
+
+    <!-- Messenger chat button -->
+    <a href="https://m.me/nguyen.hien.918626" target="_blank" class="chat-button">
+        💬 Nhắn tin Messenger
+    </a>
+</body>
+
+</html>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    const hour = new Date().getHours();
+    if (hour >= 18 || hour <= 5) {
+        document.body.style.background = "linear-gradient(to right, #2c3e50, #4ca1af)";
+    }
+</script>
+
+
+</body>
+
+</html>
